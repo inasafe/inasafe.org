@@ -19,7 +19,7 @@ wordpress:
     # This so we can share the app dir as a container storage volume
     - /app
     # so we can persist media
-    - www/wp-content:/app/wp-content
+    - wp-content/wp-content:/app/wp-content
 
 db:
   hostname: db.kartoza.com

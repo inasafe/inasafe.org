@@ -77,6 +77,7 @@ dbbackup:
 	@echo "Backing up mysql database"
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-backup.sh
+	@ls -lahtr `find ./backups -name *.sql` | tail -1
 
 wpbackup:
 	@echo
