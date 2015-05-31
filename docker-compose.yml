@@ -1,6 +1,5 @@
 wordpress:
-  build: .
-  #image: tutum/wordpress-stackable
+  image: tutum/wordpress-stackable
   hostname: kartoza.com
   links: 
    - db
@@ -10,14 +9,17 @@ wordpress:
     DB_NAME: wordpress
     DB_USER: admin
     # TODO - use an env var rather
-    # note this is also hard coded in www/wp-config.php
     DB_PASS: "baz00ka"
     DB_HOST: db
     DB_PORT: 3306
   volumes_from: 
+    # so we can have /backups folder for making backups
     - db
   volumes:
-    - www:/app
+    # This so we can share the app dir as a container storage volume
+    - /app
+    # so we can persist media
+    - www/wp-content:/app/wp-content
 
 db:
   hostname: db.kartoza.com
