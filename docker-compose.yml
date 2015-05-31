@@ -1,0 +1,29 @@
+wordpress:
+  build: .
+  #image: tutum/wordpress-stackable
+  hostname: kartoza.com
+  links: 
+   - db
+  ports:
+   - "2080:80"
+  environment:
+    DB_NAME: wordpress
+    DB_USER: admin
+    # TODO - use an env var rather
+    # note this is also hard coded in www/wp-config.php
+    DB_PASS: "baz00ka"
+    DB_HOST: db
+    DB_PORT: 3306
+  volumes_from: 
+    - db
+  volumes:
+    - www:/app
+
+db:
+  hostname: db.kartoza.com
+  image: tutum/mysql:5.5
+  environment:
+    # TODO - use an env var rather
+    MYSQL_PASS: "baz00ka"
+  volumes:
+    - backups:/backups
