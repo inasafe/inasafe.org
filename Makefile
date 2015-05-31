@@ -79,6 +79,16 @@ dbbackup:
 	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-backup.sh
 	@ls -lahtr `find ./backups -name *.sql` | tail -1
 
+dbrestore:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Restoring wordpress.sql over current wordpress database"
+	@echo "You must ensure that the ./backups/wordpress.sql exists and is valid"
+	@echo "the existing wordpress database will be lost!"
+	@echo "------------------------------------------------------------------"
+	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-restore.sh
+
+
 wpbackup:
 	@echo
 	@echo "------------------------------------------------------------------"
