@@ -1,2 +1,4 @@
 wp-content/*
 backups/*.sql
+db/*
+*.tar

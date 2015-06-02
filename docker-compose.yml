@@ -1,6 +1,6 @@
 wordpress:
   image: tutum/wordpress-stackable
-  hostname: kartoza.com
+  hostname: inasafe.org
   links: 
    - db
   ports:
@@ -8,8 +8,10 @@ wordpress:
   environment:
     DB_NAME: wordpress
     DB_USER: admin
-    # TODO - use an env var rather
-    DB_PASS: "baz00ka"
+    # Environment variables with only a key are resolved to their 
+    # values on the machine Compose is running on.
+    # so make sure to set the DB_PASS env var before using this config file
+    DB_PASS:
     DB_HOST: db
     DB_PORT: 3306
   volumes_from: 
@@ -19,13 +21,18 @@ wordpress:
     # This so we can share the app dir as a container storage volume
     - /app
     # so we can persist media
-    - wp-content/wp-content:/app/wp-content
+    - wp-content:/app/wp-content
 
 db:
-  hostname: db.kartoza.com
+  hostname: db.inasafe.org
   image: tutum/mysql:5.5
   environment:
-    # TODO - use an env var rather
-    MYSQL_PASS: "baz00ka"
+    # Environment variables with only a key are resolved to their 
+    # values on the machine Compose is running on.
+    # so make sure to set the MYSQL_PASS env var before using this config file
+    MYSQL_PASS:
   volumes:
     - backups:/backups
+    # This will not work on OSX/Win - comment out for those oses
+    # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
+    #- db:/var/lib/mysql

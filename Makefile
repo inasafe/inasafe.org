@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
-PROJECT_ID := kartoza
+PROJECT_ID := inasafe
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
@@ -26,7 +26,17 @@ web:
 	@echo "------------------------------------------------------------------"
 	@echo "Running "
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) up -d wordpress
+	@DB_PASS=$(PASSWORD) MYSQL_PASS=$(PASSWORD) docker-compose -p $(PROJECT_ID) up -d wordpress
+
+
+webwithrestore: kill rm web 
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Running the restoring dump from backups/wordpress.sql "
+	@echo "------------------------------------------------------------------"
+	@sleep 10
+	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-restore.sh
+
 
 kill:
 	@echo
