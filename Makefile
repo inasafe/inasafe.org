@@ -2,6 +2,7 @@
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
 PROJECT_ID := inasafe
+PASSWORD := foobar
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
