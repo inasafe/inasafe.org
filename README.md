@@ -52,4 +52,51 @@ Now restore the backup (your old db will be dropped destroying any old data):
 make dbrestore
 ```
 
+# Backups
 
+Most of the point of this project is to have a wordpress site that 
+you can backup and upgrade easily. To do backups you can use these 
+make targets:
+
+```
+make dbbackup
+make wpbackup
+```
+
+For nightly backups you can add a line like this to your crontab:
+
+```
+0 22 * * * cd /home/web/inasafe.org && make dbbackup && make wpbackup
+```
+
+# Additional make targets
+
+## Running the site
+
+* **build** - builds / fetches docker images       
+* **web** - Brings up the site. Mysql data wil be persisted in db folder, wp-content in wp-content folder.
+* **run** - executes build then web targets
+* **default** - alias for web target
+
+## Log viewing
+
+* **dblogs** - tails the logs from teh mysql container
+* **wplogs** - tails the wordpress containers logs
+
+## Shelling in to containers
+
+* **dbshell** - gives you a bash shell in the mysql container
+* **wpshell** - gives you a bash shell in the context of the wp container
+
+
+## Backup and restore
+
+* **webwithrestore** - executes web then dbrestore. This is a shortcut for restoring an existing site.
+* **dbbackup** - perform a backup of the mysql database. Backup placed in /backups/<year>/<month>
+* **dbrestore** - perform a restore of the wordpress mysql database. Restore file should exist as backups/wordpress.sql
+* **wpbackup** - performs a backup of the wp-content folder. Backup placed in /backups/<year>/<month>
+
+## Container management
+
+* **kill** - killas all containers (but does not remove them)
+* **rm** - Implies kill target. Kills then removes all containers

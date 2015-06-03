@@ -106,5 +106,5 @@ wpbackup:
 	@echo "------------------------------------------------------------------"
 	@echo "Backing up wordpress files"
 	@echo "------------------------------------------------------------------"
-	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/wp-backup.sh
+	@backups/wp-backup.sh
 
