@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
-PROJECT_ID := inasafe
-PASSWORD := foobar
+PROJECT_ID := inasafeorg
+PASSWORD := wheatsworth499
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
@@ -28,6 +28,7 @@ web:
 	@echo "Running "
 	@echo "------------------------------------------------------------------"
 	@DB_PASS=$(PASSWORD) MYSQL_PASS=$(PASSWORD) docker-compose -p $(PROJECT_ID) up -d wordpress
+	dps
 
 
 webwithrestore: kill rm web 

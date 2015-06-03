@@ -4,7 +4,7 @@ wordpress:
   links: 
    - db
   ports:
-   - "2080:80"
+   - "8101:80"
   environment:
     DB_NAME: wordpress
     DB_USER: admin
@@ -35,4 +35,4 @@ db:
     - backups:/backups
     # This will not work on OSX/Win - comment out for those oses
     # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
-    #- db:/var/lib/mysql
+    - db:/var/lib/mysql
