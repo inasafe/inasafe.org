@@ -2,3 +2,19 @@ wp-content/*
 backups/*.sql
 db/*
 *.tar
+.idea
+
+
+# Credential files
+sftp_db_credential.env
+sftp_media_credential.env
+
+# Ignore folders
+sftp_backup/backups/db/*
+!sftp_backup/backups/db/.gitkeep
+sftp_backup/backups/media/*
+!sftp_backup/backups/media/.gitkeep
+sftp_backup/target/db/*
+!sftp_backup/target/db/.gitkeep
+backups/*
+!backups/*.sh

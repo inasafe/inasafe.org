@@ -15,3 +15,6 @@ mkdir -p $BACKUP_PATH
 mysqldump wordpress -u root > ${BACKUP_PATH}/${DATE}.sql
 
 chown -R ${USER_ID}.${GROUP_ID} /backups
+
+# copy latest backup to target dir
+cp ${BACKUP_PATH}/${DATE}.sql /target/wordpress.sql
