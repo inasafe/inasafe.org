@@ -90,6 +90,7 @@ dbbackup:
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)_db_1 /backups/db-backup.sh
 	@ls -lahtr `find ./backups -name *.sql` | tail -1
+	@docker exec -t -i $(PROJECT_ID)_sftpdbbackup_1 /backups.sh
 
 dbrestore:
 	@echo
@@ -107,4 +108,20 @@ wpbackup:
 	@echo "Backing up wordpress files"
 	@echo "------------------------------------------------------------------"
 	@backups/wp-backup.sh
+	@docker exec -t -i $(PROJECT_ID)_sftpmediabackup_1 /backups.sh
 
+pushbackup:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Push local backup in sftpbackup to sftp remote server"
+	@echo "------------------------------------------------------------------"
+	@docker exec -t -i $(PROJECT_ID)_sftpdbbackup_1 /start.sh push-to-remote-sftp
+	@docker exec -t -i $(PROJECT_ID)_sftpmediabackup_1 /start.sh push-to-remote-sftp
+
+pullbackup:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Pull remote sftp backup to local backup"
+	@echo "------------------------------------------------------------------"
+	@docker exec -t -i $(PROJECT_ID)_sftpdbbackup_1 /start.sh pull-from-remote-sftp
+	@docker exec -t -i $(PROJECT_ID)_sftpmediabackup_1 /start.sh pull-from-remote-sftp
