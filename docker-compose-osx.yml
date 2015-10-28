@@ -1,0 +1,16 @@
+## Specific docker-compose configuration files for OSX
+dbstorage:
+  image: busybox
+  hostname: db.storage
+  volumes:
+    - /var/lib/mysql
+
+db:
+  volumes:
+    - ./backups:/backups
+    - ./sftp_backup/target/db:/target
+  volumes_from:
+    # Special treatment for OSX because it doesn't work to mount db
+    # folder directly
+    # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
+    - dbstorage
