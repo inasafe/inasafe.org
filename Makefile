@@ -31,7 +31,7 @@ web:
 	dps
 
 
-webwithrestore: kill rm web 
+webwithrestore: kill rm web
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running the restoring dump from backups/wordpress.sql "
@@ -125,3 +125,11 @@ pullbackup:
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)_sftpdbbackup_1 /start.sh pull-from-remote-sftp
 	@docker exec -t -i $(PROJECT_ID)_sftpmediabackup_1 /start.sh pull-from-remote-sftp
+
+rsync:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Rsyncing live wp site files"
+	@echo "------------------------------------------------------------------"
+	@rsync -av inasafe-docker:/home/data/inasafe.org/wp-content .
+	@rsync -av inasafe-docker:/home/data/inasafe.org/backups/wordpress.sql backups/wordpress.sql

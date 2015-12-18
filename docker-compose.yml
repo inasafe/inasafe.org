@@ -1,7 +1,7 @@
 wordpress:
   image: tutum/wordpress-stackable
   hostname: inasafe.org
-  links: 
+  links:
    - db
    - sftpmediabackup:sftpmediabackup
    - sftpdbbackup:sftpdbbackup
@@ -10,13 +10,13 @@ wordpress:
   environment:
     DB_NAME: wordpress
     DB_USER: admin
-    # Environment variables with only a key are resolved to their 
+    # Environment variables with only a key are resolved to their
     # values on the machine Compose is running on.
     # so make sure to set the DB_PASS env var before using this config file
     DB_PASS:
     DB_HOST: db
     DB_PORT: 3306
-  volumes_from: 
+  volumes_from:
     # so we can have /backups folder for making backups
     - db
   volumes:
@@ -73,7 +73,7 @@ db:
   links:
     - sftpdbbackup:sftpdbbackup
   environment:
-    # Environment variables with only a key are resolved to their 
+    # Environment variables with only a key are resolved to their
     # values on the machine Compose is running on.
     # so make sure to set the MYSQL_PASS env var before using this config file
     MYSQL_PASS:
