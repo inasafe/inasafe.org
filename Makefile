@@ -133,3 +133,4 @@ rsync:
 	@echo "------------------------------------------------------------------"
 	@rsync -av inasafe-docker:/home/data/inasafe.org/wp-content .
 	@rsync -av inasafe-docker:/home/data/inasafe.org/backups/wordpress.sql backups/wordpress.sql
+	@rsync -av --include '*/' --include='*.sql' --exclude="*.tar.gz" --exclude="*.zip" inasafe-docker:/home/data/inasafe.org/backups/ backups
