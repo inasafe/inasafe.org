@@ -28,6 +28,7 @@ web:
 	@echo "Running "
 	@echo "------------------------------------------------------------------"
 	@DB_PASS=$(PASSWORD) MYSQL_PASS=$(PASSWORD) docker-compose -p $(PROJECT_ID) up -d wordpress
+	@docker-compose -p $(PROJECT_ID) up -d btsync
 	dps
 
 
