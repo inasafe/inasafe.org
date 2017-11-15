@@ -84,12 +84,10 @@ db:
     # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
     - db:/var/lib/mysql
 
-btsync:                                                                                                                                                        
+btsync:
   image: kartoza/btsync
   hostname: inasafe.org-btsync
   volumes:
     - ./sftp_backup:/web
   env_file:
     - ./btsync.env
-
-
