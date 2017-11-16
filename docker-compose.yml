@@ -1,6 +1,7 @@
 wordpress:
   image: tutum/wordpress-stackable
   hostname: inasafe.org
+  restart: unless-stopped
   links: 
    - db
    - sftpmediabackup:sftpmediabackup
@@ -28,6 +29,7 @@ wordpress:
 sftpdbbackup: &sftpdbbackup
   image: kartoza/sftp-backup:1.0
   hostname: sftpdbbackup
+  restart: unless-stopped
   volumes:
     # this folder is used to store local backups from pg dbbackup
     - ./sftp_backup/backups/db:/backups
@@ -49,6 +51,7 @@ sftpdbbackup: &sftpdbbackup
 sftpmediabackup: &sftpmediabackup
   image: kartoza/sftp-backup:1.0
   hostname: sftpmediabackup
+  restart: unless-stopped
   volumes:
     # this folder is used to store local backups from django media
     - ./sftp_backup/backups/media:/backups
@@ -70,6 +73,7 @@ sftpmediabackup: &sftpmediabackup
 db:
   hostname: db.inasafe.org
   image: tutum/mysql:5.5
+  restart: unless-stopped
   links:
     - sftpdbbackup:sftpdbbackup
   environment:
@@ -84,9 +88,10 @@ db:
     # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
     - db:/var/lib/mysql
 
-btsync:                                                                                                                                                        
+btsync:
   image: kartoza/btsync
   hostname: inasafe.org-btsync
+  restart: unless-stopped
   volumes:
     - ./sftp_backup:/web
   env_file:
