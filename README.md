@@ -1,6 +1,48 @@
 A Docker-Compose project for running wordpress
 
+
 Tim Sutton, 2015
+
+
+# NOTE
+
+In May 2019 I moved the site content to a static site
+
+InaSAFE.org - Static Site
+
+General setup:
+
+Wordpress deployed on the host directly (no docker).
+Several other sites there :
+
+http://manual.inasafe.org (static)
+http://docs.inasafe.org (static, deprecated by above)
+
+Nightly and experimental builds disabled
+
+I have Wordpress disabled by default for security. When you want to update the site you need to do these steps:
+
+1. Disable static version of the site
+2. Enable WP version of the site
+3. Restart Nginx
+4. Make any needed changes
+5. Scrape the site using wget
+6. Disable WP version
+7. Enable static
+8. Restart nginx
+
+This is the command to make the mirror
+
+```
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows http://inasafe.org
+```
+
+TODO move manual, docs and static site into github pages and shut down this server
+
+I have backups of the WP dump and dynamic site on my personal machines static dir
+
+
+Original notes for docker based instance now follow:
 
 # Purpose
 
