@@ -20,3 +20,5 @@ sftp_backup/target/db/*
 !sftp_backup/target/db/.gitkeep
 backups/*
 !backups/*.sh
+sftp_backup/.sync/
+btsync.env

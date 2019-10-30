@@ -43,10 +43,11 @@ web:
 	@echo "------------------------------------------------------------------"
 	@echo $(CONF_HELP)
 	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) up -d wordpress
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) up -d btsync
 	dps
 
 
-webwithrestore: kill rm web 
+webwithrestore: kill rm web
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running the restoring dump from backups/wordpress.sql "
@@ -145,3 +146,12 @@ pullbackup:
 	@echo "------------------------------------------------------------------"
 	@docker exec -t -i $(PROJECT_ID)_sftpdbbackup_1 /start.sh pull-from-remote-sftp
 	@docker exec -t -i $(PROJECT_ID)_sftpmediabackup_1 /start.sh pull-from-remote-sftp
+
+rsync:
+	@echo
+	@echo "------------------------------------------------------------------"
+	@echo "Rsyncing live wp site files"
+	@echo "------------------------------------------------------------------"
+	@rsync -av inasafe-docker:/home/data/inasafe.org/wp-content .
+	@rsync -av inasafe-docker:/home/data/inasafe.org/backups/wordpress.sql backups/wordpress.sql
+	@rsync -av --include '*/' --include='*.sql' --include="*.tar.gz" --exclude="*.zip" inasafe-docker:/home/data/inasafe.org/sftp_backup/backups/db backups/
