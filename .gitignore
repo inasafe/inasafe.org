@@ -3,11 +3,13 @@ backups/*.sql
 db/*
 *.tar
 .idea
-
+venv
 
 # Credential files
 sftp_db_credential.env
 sftp_media_credential.env
+wordpress_credential.env
+mysql_credential.env
 
 # Ignore folders
 sftp_backup/backups/db/*

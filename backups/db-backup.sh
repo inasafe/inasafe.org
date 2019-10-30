@@ -12,9 +12,10 @@ MONTH=$(date +%m)
 BACKUP_PATH=/backups/${YEAR}/${MONTH}
 mkdir -p $BACKUP_PATH
 
-mysqldump wordpress -u root > ${BACKUP_PATH}/${DATE}.sql
+# Directly create backups to target folder and feed
+# it to sftp backup.
+# sftp backup will handle the versioning
+mysqldump wordpress -u root > /target/wordpress.sql
 
 chown -R ${USER_ID}.${GROUP_ID} /backups
-
-# copy latest backup to target dir
-cp ${BACKUP_PATH}/${DATE}.sql /target/wordpress.sql
+chown -R ${USER_ID}.${GROUP_ID} /target

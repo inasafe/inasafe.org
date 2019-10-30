@@ -1,8 +1,10 @@
+## Base compose configuration
+
 wordpress:
   image: tutum/wordpress-stackable
   hostname: inasafe.org
   restart: unless-stopped
-  links: 
+  links:
    - db
    - sftpmediabackup:sftpmediabackup
    - sftpdbbackup:sftpdbbackup
@@ -14,9 +16,12 @@ wordpress:
     # Environment variables with only a key are resolved to their
     # values on the machine Compose is running on.
     # so make sure to set the DB_PASS env var before using this config file
-    DB_PASS:
+    # DB_PASS:
     DB_HOST: db
     DB_PORT: 3306
+  env_file:
+    # Wordpress credentials, set the DB_PASS environment
+    - wordpress_credential.env
   volumes_from:
     # so we can have /backups folder for making backups
     - db
@@ -72,21 +77,21 @@ sftpmediabackup: &sftpmediabackup
 
 db:
   hostname: db.inasafe.org
-  image: tutum/mysql:5.5
+  build: docker-db
   restart: unless-stopped
   links:
     - sftpdbbackup:sftpdbbackup
-  environment:
-    # Environment variables with only a key are resolved to their
-    # values on the machine Compose is running on.
-    # so make sure to set the MYSQL_PASS env var before using this config file
-    MYSQL_PASS:
+  env_file:
+    # Make sure to set the MYSQL_PASS env var before using this config file
+    # set MYSQL_PASS environment
+    - mysql_credential.env
   volumes:
     - ./backups:/backups
     - ./sftp_backup/target/db:/target
     # This will not work on OSX/Win - comment out for those oses
     # See https://github.com/tutumcloud/tutum-docker-mariadb/issues/5
-    - db:/var/lib/mysql
+    # The linux configuration will override this for production mode
+    # - ./db:/var/lib/mysql
 
 btsync:
   image: kartoza/btsync

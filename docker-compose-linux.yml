@@ -1,0 +1,5 @@
+## Specific docker-compose configuration files for Linux
+db:
+  volumes:
+  # Enable this in linux because we want to persist the db
+    - .db:/var/lib/mysql

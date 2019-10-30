@@ -2,7 +2,20 @@
 # Set this to the name of your project / website
 # ------------------------------------------------------------------------
 PROJECT_ID := inasafeorg
-PASSWORD := wheatsworth499
+CONF_FILE := -f docker-compose.yml
+CONF_HELP := Uses docker-compose.yml
+
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Linux)
+	CONF_HELP := Detecting Linux Environment. Use docker-compose-linux.yml
+	CONF_FILE += -f docker-compose-linux.yml
+endif
+ifeq ($(UNAME_S),Darwin)
+	CONF_HELP := Detecting OSX Environment. Use docker-compose-osx.yml
+	CONF_FILE += -f docker-compose-osx.yml
+endif
+
 
 # ------------------------------------------------------------------------
 # Should not normally need to change anything below this point....
@@ -20,15 +33,17 @@ build:
 	@echo "------------------------------------------------------------------"
 	@echo "Building "
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) build
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) build
 
 web:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Running "
 	@echo "------------------------------------------------------------------"
-	@DB_PASS=$(PASSWORD) MYSQL_PASS=$(PASSWORD) docker-compose -p $(PROJECT_ID) up -d wordpress
-	@docker-compose -p $(PROJECT_ID) up -d btsync
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) up -d wordpress
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) up -d btsync
 	dps
 
 
@@ -46,36 +61,41 @@ kill:
 	@echo "------------------------------------------------------------------"
 	@echo "Killing all containers!"
 	@echo "------------------------------------------------------------------"
+	@echo $(CONF_HELP)
 
-	@docker-compose -p $(PROJECT_ID) kill
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) kill
 
 rm: kill
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Removing all containers!!! "
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) rm
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) rm
 
 wplogs:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Showing wordpress logs "
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) logs wordpress
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) logs wordpress
 
 dblogs:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Showing mysql logs "
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) logs db
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) logs db
 
 wpshell:
 	@echo
 	@echo "------------------------------------------------------------------"
 	@echo "Shelling in to wordpress (press enter to activate shell)"
 	@echo "------------------------------------------------------------------"
-	@docker-compose -p $(PROJECT_ID) run wordpress /bin/bash
+	@echo $(CONF_HELP)
+	@docker-compose $(CONF_FILE) -p $(PROJECT_ID) run wordpress /bin/bash
 
 dbshell:
 	@echo
