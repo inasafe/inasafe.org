@@ -1,0 +1,4 @@
+images:
+  - name: inasafe
+    dockerfile: deployment/docker/Dockerfile
+    buildPath: .
