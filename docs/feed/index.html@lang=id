@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
-	xmlns:content="http://purl.org/rss/1.0/modules/content/"
-	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
-	xmlns:dc="http://purl.org/dc/elements/1.1/"
-	xmlns:atom="http://www.w3.org/2005/Atom"
-	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
-	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	xmlns:content="https://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="https://wellformedweb.org/CommentAPI/"
+	xmlns:dc="https://purl.org/dc/elements/1.1/"
+	xmlns:atom="https://www.w3.org/2005/Atom"
+	xmlns:sy="https://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="https://purl.org/rss/1.0/modules/slash/"
 	>
 
 <channel>
 	<title>InaSAFE</title>
-	<atom:link href="http://inasafe.org/feed/?lang=id" rel="self" type="application/rss+xml" />
-	<link>http://inasafe.org?lang=id</link>
+	<atom:link href="https://inasafe.org/feed/?lang=id" rel="self" type="application/rss+xml" />
+	<link>https://inasafe.org?lang=id</link>
 	<description>News and Updates from the InaSAFE Team</description>
 	<lastBuildDate>Wed, 17 Feb 2016 10:23:54 +0000</lastBuildDate>
 	<language>id-ID</language>
@@ -21,16 +21,16 @@
 	
 	<item>
 		<title>Pelatihan OSM QGIS dan InaSAFE di InaDRTG</title>
-		<link>http://inasafe.org/pelatihan-osm-qgis-dan-inasafe-di-inadrtg/?lang=id</link>
+		<link>https://inasafe.org/pelatihan-osm-qgis-dan-inasafe-di-inadrtg/?lang=id</link>
 				<pubDate>Wed, 17 Feb 2016 10:23:54 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2831</guid>
-				<description><![CDATA[Pada tanggal 16-18 Desember 2015, tim HOT dan DMI (Disaster Management Innovation) mengadakan pelatihan di InaDRTG. Pelatihan ini merupakan pelatihan &#8230; <a href="http://inasafe.org/pelatihan-osm-qgis-dan-inasafe-di-inadrtg/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2831</guid>
+				<description><![CDATA[Pada tanggal 16-18 Desember 2015, tim HOT dan DMI (Disaster Management Innovation) mengadakan pelatihan di InaDRTG. Pelatihan ini merupakan pelatihan &#8230; <a href="https://inasafe.org/pelatihan-osm-qgis-dan-inasafe-di-inadrtg/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>InaSAFE dalam Menyusun Rencana Kontinjensi</title>
-		<link>http://inasafe.org/inasafe-dalam-menyusun-rencana-kontinjensi/?lang=id</link>
+		<link>https://inasafe.org/inasafe-dalam-menyusun-rencana-kontinjensi/?lang=id</link>
 				<pubDate>Wed, 17 Feb 2016 10:15:35 +0000</pubDate>
 		<dc:creator><![CDATA[harry]]></dc:creator>
 				<category><![CDATA[Training]]></category>
@@ -38,62 +38,62 @@
 		<category><![CDATA[Contingency Planning]]></category>
 		<category><![CDATA[Rencana Kontinjensi]]></category>
 
-		<guid isPermaLink="false">http://inasafe.org/?p=2827</guid>
-				<description><![CDATA[Setelah telah mengadakan pelatihan InaSAFE dalam kaitannya dengan kajian resiko bencana dengan Badan Nasional Penanggulangan Bencana (BNPB) bulan Desember 2015 &#8230; <a href="http://inasafe.org/inasafe-dalam-menyusun-rencana-kontinjensi/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2827</guid>
+				<description><![CDATA[Setelah telah mengadakan pelatihan InaSAFE dalam kaitannya dengan kajian resiko bencana dengan Badan Nasional Penanggulangan Bencana (BNPB) bulan Desember 2015 &#8230; <a href="https://inasafe.org/inasafe-dalam-menyusun-rencana-kontinjensi/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>Perencaan yang Lebih Baik Menyelematkan Nyawa – InaSAFE 3.0</title>
-		<link>http://inasafe.org/perencaan-yang-lebih-baik-menyelematkan-nyawa-inasafe-3-0/?lang=id</link>
+		<link>https://inasafe.org/perencaan-yang-lebih-baik-menyelematkan-nyawa-inasafe-3-0/?lang=id</link>
 				<pubDate>Fri, 20 Mar 2015 08:56:02 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2546</guid>
-				<description><![CDATA[Versi terbaru dari InaSAFE (3.0) telah diluncurkan dan siap untuk digunakan. InaSAFE (3.0) adalah perangkat lunak bebas yang melengkapi para &#8230; <a href="http://inasafe.org/perencaan-yang-lebih-baik-menyelematkan-nyawa-inasafe-3-0/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2546</guid>
+				<description><![CDATA[Versi terbaru dari InaSAFE (3.0) telah diluncurkan dan siap untuk digunakan. InaSAFE (3.0) adalah perangkat lunak bebas yang melengkapi para &#8230; <a href="https://inasafe.org/perencaan-yang-lebih-baik-menyelematkan-nyawa-inasafe-3-0/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>Perangkat untuk Penanggulangan Bencana Dirilis untuk Seluruh Dunia</title>
-		<link>http://inasafe.org/perangkat-untuk-penanggulangan-bencana-dirilis-untuk-seluruh-dunia/?lang=id</link>
+		<link>https://inasafe.org/perangkat-untuk-penanggulangan-bencana-dirilis-untuk-seluruh-dunia/?lang=id</link>
 				<pubDate>Mon, 07 Apr 2014 09:15:10 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2558</guid>
-				<description><![CDATA[Sebuah perangkat lunak baru yang dapat memprediksi dampak sosial dan dampak manusia akibat bencana alam, dirilis hari ini di Indonesia. &#8230; <a href="http://inasafe.org/perangkat-untuk-penanggulangan-bencana-dirilis-untuk-seluruh-dunia/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2558</guid>
+				<description><![CDATA[Sebuah perangkat lunak baru yang dapat memprediksi dampak sosial dan dampak manusia akibat bencana alam, dirilis hari ini di Indonesia. &#8230; <a href="https://inasafe.org/perangkat-untuk-penanggulangan-bencana-dirilis-untuk-seluruh-dunia/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>Membantu Kesiapsiagaan Bencana yang lebih baik bagi Indonesia dan Kawasan Sekitarnya</title>
-		<link>http://inasafe.org/membantu-kesiapsiagaan-bencana-yang-lebih-baik-bagi-indonesia-dan-kawasan-sekitarnya/?lang=id</link>
+		<link>https://inasafe.org/membantu-kesiapsiagaan-bencana-yang-lebih-baik-bagi-indonesia-dan-kawasan-sekitarnya/?lang=id</link>
 				<pubDate>Thu, 18 Apr 2013 10:31:47 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2569</guid>
-				<description><![CDATA[Untuk membantu kesiapsiagaan masyarakat lebih baik menghadapi banjir, gempa bumi dan tsunami, sebuah perangkat pemodelan dampak ancaman, Indonesia Scenario Assessment &#8230; <a href="http://inasafe.org/membantu-kesiapsiagaan-bencana-yang-lebih-baik-bagi-indonesia-dan-kawasan-sekitarnya/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2569</guid>
+				<description><![CDATA[Untuk membantu kesiapsiagaan masyarakat lebih baik menghadapi banjir, gempa bumi dan tsunami, sebuah perangkat pemodelan dampak ancaman, Indonesia Scenario Assessment &#8230; <a href="https://inasafe.org/membantu-kesiapsiagaan-bencana-yang-lebih-baik-bagi-indonesia-dan-kawasan-sekitarnya/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>InaSAFE meraih penghargaan sebagai salah satu “Proyek Sumber Terbuka (Open Source) Paling Menjanjikan tahun 2012</title>
-		<link>http://inasafe.org/inasafe-meraih-penghargaan-sebagai-salah-satu-proyek-sumber-terbuka-open-source-paling-menjanjikan-tahun-2012/?lang=id</link>
+		<link>https://inasafe.org/inasafe-meraih-penghargaan-sebagai-salah-satu-proyek-sumber-terbuka-open-source-paling-menjanjikan-tahun-2012/?lang=id</link>
 				<pubDate>Wed, 17 Apr 2013 15:53:29 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2593</guid>
-				<description><![CDATA[Pertama, Presiden Indonesia, Dr. Susilo Bambang Yudhoyono memuji InaSAFE (Indonesia Scenario Assessment for Emergencies) sebagai “sangat bermanfaat bagi kita semua” &#8230; <a href="http://inasafe.org/inasafe-meraih-penghargaan-sebagai-salah-satu-proyek-sumber-terbuka-open-source-paling-menjanjikan-tahun-2012/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2593</guid>
+				<description><![CDATA[Pertama, Presiden Indonesia, Dr. Susilo Bambang Yudhoyono memuji InaSAFE (Indonesia Scenario Assessment for Emergencies) sebagai “sangat bermanfaat bagi kita semua” &#8230; <a href="https://inasafe.org/inasafe-meraih-penghargaan-sebagai-salah-satu-proyek-sumber-terbuka-open-source-paling-menjanjikan-tahun-2012/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>Kesuksesan Kunci dalam Pengelolaan Bencana: Januari 2012 – Februari 2013</title>
-		<link>http://inasafe.org/kesuksesan-kunci-dalam-pengelolaan-bencana-januari-2012-februari-2013/?lang=id</link>
+		<link>https://inasafe.org/kesuksesan-kunci-dalam-pengelolaan-bencana-januari-2012-februari-2013/?lang=id</link>
 				<pubDate>Wed, 17 Apr 2013 10:53:57 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2589</guid>
-				<description><![CDATA[<a href="http://issuu.com/aifdr/docs/130325_aifdr-key-dm-2013-indonesian" target="_blank">Open publication</a> &#8211; Free <a href="http://issuu.com" target="_blank">publishing</a> <a href="http://www.aifdr.org/demo/wp-content/uploads/2013/04/130325_Flyer_QAI_2013_ID.pdf">Download</a> &#160;PDF File (526 KB) Risiko dan Kerentanan Untuk membantu masyarakat lebih bersiap menghadapi bencana banjir, gempa bumi dan &#8230; <a href="http://inasafe.org/kesuksesan-kunci-dalam-pengelolaan-bencana-januari-2012-februari-2013/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2589</guid>
+				<description><![CDATA[<a href="https://issuu.com/aifdr/docs/130325_aifdr-key-dm-2013-indonesian" target="_blank">Open publication</a> &#8211; Free <a href="https://issuu.com" target="_blank">publishing</a> <a href="https://www.aifdr.org/demo/wp-content/uploads/2013/04/130325_Flyer_QAI_2013_ID.pdf">Download</a> &#160;PDF File (526 KB) Risiko dan Kerentanan Untuk membantu masyarakat lebih bersiap menghadapi bencana banjir, gempa bumi dan &#8230; <a href="https://inasafe.org/kesuksesan-kunci-dalam-pengelolaan-bencana-januari-2012-februari-2013/?lang=id">Continued</a>]]></description>
 									</item>
 		<item>
 		<title>Indonesia Scenario Assessment for Emergencies – InaSAFE</title>
-		<link>http://inasafe.org/indonesia-scenario-assessment-for-emergencies-inasafe/?lang=id</link>
+		<link>https://inasafe.org/indonesia-scenario-assessment-for-emergencies-inasafe/?lang=id</link>
 				<pubDate>Tue, 24 Jul 2012 17:15:54 +0000</pubDate>
 		<dc:creator><![CDATA[Maria Solovyeva]]></dc:creator>
 		
-		<guid isPermaLink="false">http://inasafe.org/?p=2633</guid>
-				<description><![CDATA[dalah perangkat lunak gratis yang menghasilkan skenario realistis dampak bahaya bencana alam yang dapat membantu upaya perencanaan, kesiapsiagaan dan tanggap &#8230; <a href="http://inasafe.org/indonesia-scenario-assessment-for-emergencies-inasafe/?lang=id">Continued</a>]]></description>
+		<guid isPermaLink="false">https://inasafe.org/?p=2633</guid>
+				<description><![CDATA[dalah perangkat lunak gratis yang menghasilkan skenario realistis dampak bahaya bencana alam yang dapat membantu upaya perencanaan, kesiapsiagaan dan tanggap &#8230; <a href="https://inasafe.org/indonesia-scenario-assessment-for-emergencies-inasafe/?lang=id">Continued</a>]]></description>
 									</item>
 	</channel>
 </rss>
