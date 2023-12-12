@@ -15,8 +15,8 @@ General setup:
 Wordpress deployed on the host directly (no docker).
 Several other sites there :
 
-http://manual.inasafe.org (static)
-http://docs.inasafe.org (static, deprecated by above)
+https://manual.inasafe.org (static)
+https://docs.inasafe.org (static, deprecated by above)
 
 Nightly and experimental builds disabled
 
@@ -34,7 +34,7 @@ I have Wordpress disabled by default for security. When you want to update the s
 This is the command to make the mirror
 
 ```
-wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows http://inasafe.org
+wget --recursive --no-clobber --page-requisites --html-extension --convert-links --restrict-file-names=windows https://inasafe.org
 ```
 
 TODO move manual, docs and static site into github pages and shut down this server
