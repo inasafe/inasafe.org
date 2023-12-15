@@ -374,7 +374,7 @@ a:focus {
   position: absolute;
   top: 1px;
   right: 15px;
-  background: url("https://inasafe.org/for-users/wp-content/uploads/2015/02/search-home.png") no-repeat center;
+  background: url("/for-users/wp-content/uploads/2015/02/search-home.png") no-repeat center;
   border: none;
   height: 36px;
   width: 36px;
@@ -1234,8 +1234,8 @@ footer.content-info {color:#8C8989;background:#282a2b;padding-top:15px;padding-b
 				<link rel="shortcut icon" href="../../wp-content/uploads/2015/08/favicon1.ico" type="image/x-icon" />	<link rel="canonical" href="index.html">
 <style type="text/css" title="dynamic-css" class="options-output">body{background-color:#ffffff;}.wrap.main-section .content .bg{background-color:#ffffff;}.jumbotron{background-color:#eeeeee;}.jumbotron{font-family:Arial, Helvetica, sans-serif;font-weight:normal;font-style:400;color:#333333;font-size:20px;}body{font-family:Ubuntu;line-height:23px;font-weight:400;font-style:normal;color:#6e7377;font-size:16px;}h1, .h1{font-family:Ubuntu;text-align:center;line-height:125%;font-weight:700;font-style:normal;color:#2f3338;font-size:187%;}h2, .h2{font-family:Ubuntu;line-height:120%;font-weight:500;font-style:normal;color:#2f3338;font-size:160%;}h3, .h3{font-family:Ubuntu;line-height:120%;font-weight:500;font-style:normal;color:#2f3338;font-size:125%;}h4, .h4{font-family:Ubuntu;line-height:125%;font-weight:400;font-style:normal;font-size:125%;}h5, .h5{font-family:Ubuntu;line-height:100%;font-weight:400;font-style:normal;font-size:100%;}h6, .h6{font-family:Ubuntu;line-height:85%;font-weight:normal;font-style:normal;font-size:85%;}</style>	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
-		<script src="https://inasafe.org/wp-content/themes/shoestrap-3/assets/js/vendor/html5shiv.js"></script>
-		<script src="https://inasafe.org/wp-content/themes/shoestrap-3/assets/js/vendor/respond.min.js"></script>
+		<script src="/wp-content/themes/shoestrap-3/assets/js/vendor/html5shiv.js"></script>
+		<script src="/wp-content/themes/shoestrap-3/assets/js/vendor/respond.min.js"></script>
 	<![endif]-->
 
 	<link rel="alternate" type="application/rss+xml" title="InaSAFE Feed" href="../../feed/index.html">
@@ -1290,7 +1290,7 @@ footer.content-info {color:#8C8989;background:#282a2b;padding-top:15px;padding-b
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1186 menu-user-map"><a title="User Map" href="https://users.inasafe.org/">User Map</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3022 menu-case-studies"><a title="Case Studies" href="../../cases.html">Case Studies</a></li>
 </ul><button class="search"><i class="el-icon-search"></i></button></nav></div></div>      <div id="header-searchbox" style="display: none;" class="container">
-        <form id="h-search" class="header-form" method="get" action="https://inasafe.org/en/search.html">
+        <form id="h-search" class="header-form" method="get" action="/en/search.html">
         <input type="text" placeholder="Search the documentation" name="q">
         <button class="submit" type="submit" value=""><i class="el-icon-search"></i></button>
         <input type="hidden" value="yes" name="check_keywords">
@@ -1469,7 +1469,7 @@ Our new wizard has the following goal: providing a guided, logical path through 
                            <p>We are pleased to announce the availability of InaSAFE 2.2. This is a feature release, adding a number of new features and tools to make the process of contingency planning more efficient and configurable. For more information on how to participate in the InaSAFE project, please contact us at <a href="mailto:info@inasafe.org">info@inasafe.org</a> &#8211; and visit our home page at inasafe.org. We would like to thank all the developers, funders, stakeholders and interested people for the great contributions they have made to InaSAFE thus far! The image on the right (click for a larger view) features participants at the InaSAFE workshop held in Jakarta over the period 22 September &#8211; 30 September 2014.</p>
 <p><em>Important note:</em> InaSAFE 2.2 does not support QGIS 2.6. Please ensure you have QGIS 2.4 in order to be able to download and use this plugin. This is addressed in the 2.2.3 Bugfix release above.</p>
 <h2>Preliminary support for ISO19115 metadata</h2>
-<p>Until version 2.2 of InaSAFE, our (keywords system)[<a href="https://inasafe.org/en/user-docs/application-help/keywords.html">https://inasafe.org/en/user-docs/application-help/keywords.html</a>] has relied on a simple text file format for representing the various properties about GIS layers &#8211; for example whether they are hazard, exposure or impact layers. As of InaSAFE 2.2 we will be shifting towards using the industry standard ISO19115 file format in order to facilitate data interchange with other GIS users.</p>
+<p>Until version 2.2 of InaSAFE, our (keywords system)[<a href="/en/user-docs/application-help/keywords.html">/en/user-docs/application-help/keywords.html</a>] has relied on a simple text file format for representing the various properties about GIS layers &#8211; for example whether they are hazard, exposure or impact layers. As of InaSAFE 2.2 we will be shifting towards using the industry standard ISO19115 file format in order to facilitate data interchange with other GIS users.</p>
 <p>For technical users, note that keywords will be represented in the gmd:supplementalInformation element of the ISO19115 document and still adhere to our key : value pair format within the CDATA block as per the example below.</p>
 <div class="highlight highlight-xml">
 <pre>&lt;<span class="pl-ent">gmd</span><span class="pl-ent">:</span><span class="pl-ent">supplementalInformation</span>&gt; &lt;<span class="pl-ent">inasafe_keywords</span>&gt; <span class="pl-s"><span class="pl-pds">&lt;![CDATA[</span></span></pre>
@@ -1565,7 +1565,7 @@ When an analysis is completed a red rectangle indicates the last completed analy
                          <h1 class="version">2.0</h1>
                          <div class="description">
                            <h2>Training materials updates</h2>
-<p>We have been hard at work to improve our documentation on <a href="../../home/index.html">https://inasafe.org</a>. The tutorials section has been overhauled at <a href="https://inasafe.org/en/training/index.html">https://inasafe.org/en/training/index.html</a>. We have also added an archive section which you can use to fetch older versions of our documentation (see <a href="https://inasafe.org/pdf/">https://inasafe.org/pdf/</a>). We have also added a new download section to our web site <a href="https://data.inasafe.org/">https://data.inasafe.org/</a> which contains the sample data used in the training materials. We have made many other improvements to the documentation &#8211; we hope you find the information you need to be productive with InaSAFE!</p>
+<p>We have been hard at work to improve our documentation on <a href="../../home/index.html">https://inasafe.org</a>. The tutorials section has been overhauled at <a href="/en/training/index.html">/en/training/index.html</a>. We have also added an archive section which you can use to fetch older versions of our documentation (see <a href="/pdf/">/pdf/</a>). We have also added a new download section to our web site <a href="https://data.inasafe.org/">https://data.inasafe.org/</a> which contains the sample data used in the training materials. We have made many other improvements to the documentation &#8211; we hope you find the information you need to be productive with InaSAFE!</p>
 <h2>Polygon flood impact on roads impact function added</h2>
 <p>Our first demonstrator impact function that uses the native QGIS geoprocessing functionality is included in INaSAFE 2.0. The function takes as input a polygon flood layer (category: hazard, subcategory: flood [wet/dry]) and a roads layer (category: exposure, subcategory: road). It will return a new roads layer where each road segment is classified as inundated or not inundated. You can download suitable roads data using the OSM Downloader tool roads fetcher as mentioned below.</p>
 <h2>Report view in your web browser</h2>
@@ -1573,7 +1573,7 @@ When an analysis is completed a red rectangle indicates the last completed analy
 <h2>Custom logo selection</h2>
 <p>As well as the new report template capabilities, you can now also set your organisation logo in the InaSAFE options dialog. This logo will then be used for any of the built in InaSAFE templates that you use, or anywhere in your own templates if you use the element id safe-logo. Click image on right to see an example of how the organisation logo is placed in the bottom right of the template.</p>
 <h2>Template based reports</h2>
-<p>Another key new feature in InaSAFE 2.0 is the ability to define and use custom print templates (using the built in QGIS composer templating system) for your reports. This new feature means that you can now place your own logos in the report and customise the arrangement of the various report elements on the page. You can also print onto different page sizes (e.g. A3, A2) and in different layouts (portrait, landscape). You can find more details about this functionality at <a href="https://inasafe.org/en/user-docs/application-help/reports.htm">https://inasafe.org/en/user-docs/application-help/reports.htm</a>.</p>
+<p>Another key new feature in InaSAFE 2.0 is the ability to define and use custom print templates (using the built in QGIS composer templating system) for your reports. This new feature means that you can now place your own logos in the report and customise the arrangement of the various report elements on the page. You can also print onto different page sizes (e.g. A3, A2) and in different layouts (portrait, landscape). You can find more details about this functionality at <a href="/en/user-docs/application-help/reports.htm">/en/user-docs/application-help/reports.htm</a>.</p>
 <h2>Impact merge tool</h2>
 <p>This tool will allow you to merge the output from two impact assessments covering the same geographic extent and aggregated by the same areas. For example if you run a flood analysis on Kapubaten (districts) in Jakarta for both impact on people and buildings, you can generate a report that combines these two exposures into a single report.</p>
 <p>The generated report combines the result of post-processing analysis on each area, for example generating totals for each type of critical building affected, age and gender breakdowns etc.</p>
