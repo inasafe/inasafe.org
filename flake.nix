@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: Kartoza
+# SPDX-License-Identifier: CC-BY-4.0
 {
   description = "NixOS developer environment for the InaSAFE docs + website (MkDocs Material) site.";
 
@@ -47,8 +49,10 @@
           pkgs.yamllint
           pkgs.yamlfmt
           pkgs.actionlint
-          pkgs.nodePackages.cspell
+          pkgs.cspell
+          pkgs.gitleaks
           pkgs.nixfmt-rfc-style
+          pkgs.nodejs # runs scripts/migrate_wp_content.mjs
         ];
         shellHook = ''
           if command -v pre-commit >/dev/null && [ -d .git ]; then

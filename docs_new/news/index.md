@@ -1,0 +1,21 @@
+# News
+
+- [InaSAFE 5.0 is released](inasafe-5-0-is-released.md) — 2018-11-15
+- [InaSAFE 4.4 is released](inasafe-4-4-is-released.md) — 2018-06-03
+- [InaSAFE 4.1 is released!](inasafe-4-1-is-released.md) — 2017-06-13
+- [InaSAFE 4.0 is released!](inasafe-4-0-is-released.md) — 2017-03-22
+- [InaSAFE 3.5 is released!](inasafe-3-5-is-released.md) — 2016-08-11
+- [InaSAFE 3.4 is released](inasafe-3-4-is-released.md) — 2016-05-31
+- [InaSAFE 3.3 is released!](inasafe-3-3-is-released.md) — 2016-03-31
+- [InaSAFE 3.2.6 is released!](inasafe-3-2-6-is-released.md) — 2016-01-19
+- [InaSAFE 3.2.5 is released!](inasafe-3-2-5-is-released.md) — 2016-01-11
+- [InaSAFE 3.2.4 is released!](inasafe-3-2-4-is-released.md) — 2015-12-05
+- [InaSAFE 3.2.3 is released!](inasafe-3-2-3-is-released.md) — 2015-11-19
+- [InaSAFE 3.2.2 has been released!](inasafe-3-2-2-has-been-released.md) — 2015-11-11
+- [InaSAFE 3.2.1 Released!](inasafe-3-2-1-released.md) — 2015-10-06
+- [InaSAFE 3.2 is released!](inasafe-3-2-is-released.md) — 2015-08-31
+- [InaSAFE 3.2 is pending …](inasafe-3-2-is-pending.md) — 2015-06-04
+- [InaSAFE 3.1 is released](inasafe-3-1-is-released.md) — 2015-04-20
+- [InaSAFE 3.0 Released](version-3-0.md) — 2015-03-06
+- [InaSAFE 2.2.0 released](news-2.md) — 2014-12-02
+- [InaSAFE 2.1.0 now available](another-news-article.md) — 2014-06-27
