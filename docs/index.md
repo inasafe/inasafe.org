@@ -21,6 +21,8 @@ and modify it.
 [:material-hand-heart: I'm a Contributor](contributing/index.md){ .md-button }
 [:simple-github: GitHub](https://github.com/inasafe/inasafe){ .md-button }
 
+![InaSAFE screenshot](assets/inasafe-screenshot.jpg)
+
 ## Explore
 
 <div class="grid cards" markdown>
@@ -82,3 +84,17 @@ and modify it.
 - [InaSAFE 4.1 is released!](news/inasafe-4-1-is-released.md) — 2017-06-13
 
 [:octicons-arrow-right-24: All news](news/index.md)
+
+## Developed by
+
+<div class="grid cards" markdown>
+
+-   ![BNPB](assets/partners/bnpb.png){ width="150" }
+
+-   ![Australian Aid](assets/partners/australian-aid.png){ width="150" }
+
+-   ![World Bank](assets/partners/world-bank.png){ width="150" }
+
+</div>
+
+[:octicons-arrow-right-24: All supporters](about/supporters.md)
