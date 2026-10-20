@@ -9,7 +9,7 @@ on:
     branches: [main]
   pull_request:
     paths:
-      - "docs_new/**"
+      - "docs/**"
       - "mkdocs.yml"
       - "flake.nix"
       - "flake.lock"

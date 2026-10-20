@@ -9,8 +9,8 @@ repo_name: inasafe/inasafe.org
 # static export and must stay untouched until content migration (and the
 # hosting cutover) is complete. Rename to "docs" only as the final step of
 # retiring the old export.
-docs_dir: docs_new
-edit_uri: edit/main/docs_new/
+docs_dir: docs
+edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; InaSAFE contributors
 

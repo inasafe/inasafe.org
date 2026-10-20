@@ -17,3 +17,4 @@ ignorePaths:
   - site/**
   - "**/*.svg"
   - "**/*.lock"
+  - legacy-site/**

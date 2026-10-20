@@ -9,6 +9,9 @@ import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const DOCS = path.join(ROOT, "docs");
+// Legacy WordPress static export was relocated out of docs/ to free that path up
+// for the canonical mkdocs source tree. Read sources from here, write output to DOCS.
+const LEGACY_DOCS = path.join(ROOT, "legacy-site");
 
 function readIfExists(p) {
   return fs.existsSync(p) ? fs.readFileSync(p, "utf8") : null;
@@ -165,26 +168,26 @@ function writePage({ srcFile, destFile, titleFallback }) {
 const report = { news: [], events: [], cases: [], about: [], contributing: [], skipped: [] };
 
 // NEWS
-for (const slug of fs.readdirSync(path.join(DOCS, "news"))) {
-  const srcFile = path.join(DOCS, "news", slug, "index.html");
+for (const slug of fs.readdirSync(path.join(LEGACY_DOCS, "news"))) {
+  const srcFile = path.join(LEGACY_DOCS, "news", slug, "index.html");
   if (!fs.existsSync(srcFile)) continue;
   const r = writePost({ srcFile, destFile: path.join(DOCS, "news", `${slug}.md`) });
   if (r) report.news.push({ slug, ...r });
 }
 
 // EVENTS (English top-level dirs only; skip numeric-id duplicate "2834")
-for (const slug of fs.readdirSync(path.join(DOCS, "events"))) {
+for (const slug of fs.readdirSync(path.join(LEGACY_DOCS, "events"))) {
   if (!/^[a-z]/.test(slug)) { report.skipped.push(`events/${slug} (non-slug duplicate)`); continue; }
-  const srcFile = path.join(DOCS, "events", slug, "index.html");
+  const srcFile = path.join(LEGACY_DOCS, "events", slug, "index.html");
   if (!fs.existsSync(srcFile)) continue;
   const r = writePost({ srcFile, destFile: path.join(DOCS, "events", `${slug}.md`) });
   if (r) report.events.push({ slug, ...r });
 }
 
 // CASES (skip the "@lang=" query-string artifacts and the redundant about-inasafe/cases listing)
-for (const slug of fs.readdirSync(path.join(DOCS, "cases"))) {
+for (const slug of fs.readdirSync(path.join(LEGACY_DOCS, "cases"))) {
   if (slug.includes("@") || slug === "index.html") { report.skipped.push(`cases/${slug} (locale-query-string duplicate)`); continue; }
-  const srcFile = path.join(DOCS, "cases", slug, "index.html");
+  const srcFile = path.join(LEGACY_DOCS, "cases", slug, "index.html");
   if (!fs.existsSync(srcFile)) continue;
   const r = writePost({ srcFile, destFile: path.join(DOCS, "case-studies", `${slug}.md`) });
   if (r) report.cases.push({ slug, ...r });
@@ -202,7 +205,7 @@ const ABOUT_PAGES = [
   ["about-inasafe/supporters/index.html", "about/supporters.md", "Supporters"],
 ];
 for (const [src, dest, fallbackTitle] of ABOUT_PAGES) {
-  const r = writePage({ srcFile: path.join(DOCS, src), destFile: path.join(DOCS, dest), titleFallback: fallbackTitle });
+  const r = writePage({ srcFile: path.join(LEGACY_DOCS, src), destFile: path.join(DOCS, dest), titleFallback: fallbackTitle });
   if (r) report.about.push({ src, ...r });
 }
 report.skipped.push("about-inasafe/{flyers,screenshots,videos} (asset galleries, not article content)");
@@ -216,7 +219,7 @@ const CONTRIB_PAGES = [
   ["for-documentation-writers-and-designers/index.html", "contributing/documentation-writers-and-designers.md", "For Documentation Writers & Designers"],
 ];
 for (const [src, dest, fallbackTitle] of CONTRIB_PAGES) {
-  const r = writePage({ srcFile: path.join(DOCS, src), destFile: path.join(DOCS, dest), titleFallback: fallbackTitle });
+  const r = writePage({ srcFile: path.join(LEGACY_DOCS, src), destFile: path.join(DOCS, dest), titleFallback: fallbackTitle });
   if (r) report.contributing.push({ src, ...r });
 }
 report.skipped.push("for-contributors/ (no own content; its nested for-coders/ duplicates the top-level for-coders page)");
@@ -255,7 +258,7 @@ for (const section of SECTION_DIRS) {
     let text = fs.readFileSync(fp, "utf8");
     const before = text;
     text = text.replace(/(\.\.\/)*wp-content\/uploads\/([^)"\s]+)/g, (_, _up, rel) => {
-      const srcAbs = path.join(DOCS, "wp-content/uploads", rel);
+      const srcAbs = path.join(LEGACY_DOCS, "wp-content/uploads", rel);
       if (!fs.existsSync(srcAbs)) return `wp-content/uploads/${rel}`; // leave as-is, flagged by absence
       const base = path.basename(rel);
       const destAbs = path.join(dir, "assets", base);

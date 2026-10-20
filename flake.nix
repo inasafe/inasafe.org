@@ -1,5 +1,3 @@
-# SPDX-FileCopyrightText: Kartoza
-# SPDX-License-Identifier: CC-BY-4.0
 {
   description = "NixOS developer environment for the InaSAFE docs + website (MkDocs Material) site.";
 
