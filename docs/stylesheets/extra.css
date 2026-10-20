@@ -18,3 +18,11 @@
 [data-md-color-scheme="slate"] .md-header__button.md-logo svg {
   filter: invert(1);
 }
+
+/* Sitewide disclaimer, carried over from the original inasafe.org footer -
+   plain text there too, no box/border. */
+.inasafe-disclaimer {
+  font-size: 0.7rem;
+  opacity: 0.8;
+  margin-bottom: 0.5em;
+}
