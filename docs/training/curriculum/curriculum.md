@@ -120,7 +120,7 @@ andragogical principles (a learning approach for adults) with an emphasis on
 real tasks in the field and various methods in engaging active participation
 from the participants.
 
-## LEVELS OF WORKSHOP
+## Levels of Workshop
 
 
 The workshop consists of three levels:
