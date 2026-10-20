@@ -26,3 +26,19 @@
   opacity: 0.8;
   margin-bottom: 0.5em;
 }
+
+/* Per-page "last updated" date, moved here from the bottom of every page's
+   content (see overrides/partials/source-file.html) - unobtrusive, footer-only. */
+.inasafe-page-updated {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+/* Visible per-section accent strip under the header - see overrides/main.html
+   for the colour-per-section logic. The old site's equivalent ("second-menu")
+   was a full-width coloured bar; this is the same idea, simplified to a thin
+   strip since we don't have a matching secondary-nav link set to put in it. */
+.inasafe-accent-bar {
+  height: 4px;
+  width: 100%;
+}

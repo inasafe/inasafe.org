@@ -18,4 +18,7 @@
   <a href="https://github.com/sponsors/kartoza">Donate!</a>
   |
   <a href="https://github.com/inasafe/inasafe.org">GitHub</a>
+  {% if page.meta and page.meta.git_revision_date_localized %}
+    <span class="inasafe-page-updated">· Page last updated: {{ page.meta.git_revision_date_localized }}</span>
+  {% endif %}
 </div>

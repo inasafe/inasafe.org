@@ -1,20 +1,31 @@
 {% extends "base.html" %}
 
 {#
-  The original inasafe.org colour-codes a secondary nav strip per section:
-  blue for "For Users", green for "For Contributors" (coders/translators/
-  documentation-writers), orange everywhere else (already the default
-  accent set in docs/stylesheets/extra.css). This restores that per-section
-  signal as a build-time accent-colour override, since mkdocs-material's
-  palette is otherwise site-wide.
+  The original inasafe.org has a colour-coded strip directly under the
+  header: blue for "For Users", green for "For Contributors" (coders/
+  translators/documentation-writers), orange everywhere else. Material's
+  accent-colour variable alone doesn't render as any visible bar (it's
+  only used for link colour / a focus outline on the nav tabs), so this
+  adds the strip as an actual element, plus sets the accent variable to
+  match for anything else that does use it (links, etc).
 #}
+{% set inasafe_accent = "#f15a2b" %}
+{% if page and page.url %}
+  {% if 'contributing/users' in page.url %}
+    {% set inasafe_accent = "#3db2dd" %}
+  {% elif 'contributing/' in page.url %}
+    {% set inasafe_accent = "#50cf5c" %}
+  {% endif %}
+{% endif %}
+
 {% block extrahead %}
   {{ super() }}
-  {% if page and page.url %}
-    {% if 'contributing/users' in page.url %}
-      <style>:root, [data-md-color-scheme="slate"] { --md-accent-fg-color: #3db2dd; }</style>
-    {% elif 'contributing/' in page.url %}
-      <style>:root, [data-md-color-scheme="slate"] { --md-accent-fg-color: #50cf5c; }</style>
-    {% endif %}
-  {% endif %}
+  <style>
+    :root, [data-md-color-scheme="slate"] { --md-accent-fg-color: {{ inasafe_accent }}; }
+  </style>
+{% endblock %}
+
+{% block header %}
+  {{ super() }}
+  <div class="inasafe-accent-bar" style="background-color: {{ inasafe_accent }};"></div>
 {% endblock %}
