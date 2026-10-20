@@ -1,10 +1,43 @@
 ---
 title: "Supporters"
 ---
-<!-- TODO: manual-review — page-builder template, verify formatting/completeness against the original -->
 
 # Supporters
 
-The development of InaSAFE has been funded and supported by these organisations. Please also see our [partners page](partners.md) for information on the organisations contributing to the development of InaSAFE.
+The development of InaSAFE has been funded and supported by these organisations.
+Please also see our [partners page](partners.md) for information on the
+organisations contributing to the development of InaSAFE.
 
-[](https://www.bnpb.go.id/)[](https://dfat.gov.au/geo/indonesia/development-assistance/Pages/disaster-risk-management-in-indonesia.aspx)[](https://www.aifdr.org/)[](https://www.worldbank.org/)[](https://www.gfdrr.org/)![supporters](assets/supporters.png)
+<div class="grid cards" markdown>
+
+-   [![BNPB](../assets/partners/bnpb.png){ width="150" }](https://www.bnpb.go.id/)
+
+    ---
+
+    [BNPB](https://www.bnpb.go.id/)
+
+-   [![Australian Aid](../assets/partners/australian-aid.png){ width="150" }](https://dfat.gov.au/geo/indonesia/development-assistance/Pages/disaster-risk-management-in-indonesia.aspx)
+
+    ---
+
+    [Australian Government](https://dfat.gov.au/geo/indonesia/development-assistance/Pages/disaster-risk-management-in-indonesia.aspx)
+
+-   [![World Bank](../assets/partners/world-bank.png){ width="150" }](https://www.worldbank.org/)
+
+    ---
+
+    [World Bank](https://www.worldbank.org/)
+
+-   __[AIFDR](https://www.aifdr.org/)__
+
+    ---
+
+    Australia-Indonesia Facility for Disaster Reduction
+
+-   __[GFDRR](https://www.gfdrr.org/)__
+
+    ---
+
+    Global Facility for Disaster Reduction and Recovery
+
+</div>
