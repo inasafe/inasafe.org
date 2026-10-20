@@ -1,7 +1,7 @@
 ---
-title: "8TH AUSTRALASIAN NATURAL HAZARDS MANAGEMENT CONFERENCE"
+title: "8th Australasian Natural Hazards Management Conference"
 ---
-# 8TH AUSTRALASIAN NATURAL HAZARDS MANAGEMENT CONFERENCE
+# 8th Australasian Natural Hazards Management Conference
 
 13 – 15th October 2015
 Perth, Australia
