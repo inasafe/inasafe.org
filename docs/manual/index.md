@@ -12,7 +12,7 @@ How to install InaSAFE, run an impact assessment, and use every tool in the plug
 
     [:octicons-arrow-right-24: Read more](install.md)
 
--   :material-toolbar:{ .lg .middle } __Toolbar__
+-   :material-toolbox:{ .lg .middle } __Toolbar__
 
     ---
 

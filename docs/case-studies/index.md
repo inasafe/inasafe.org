@@ -28,7 +28,7 @@ Real-world disaster risk assessments using InaSAFE.
 
     [:octicons-arrow-right-24: Read more](disaster-risk-assessment-in-nagekeo.md)
 
--   :material-home-flood-outline:{ .lg .middle } __Flood Contingency Plan, Makassar City, South Sulawesi__
+-   :material-home-flood:{ .lg .middle } __Flood Contingency Plan, Makassar City, South Sulawesi__
 
     ---
 
