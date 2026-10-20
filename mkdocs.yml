@@ -76,5 +76,18 @@ nav:
       - News: news/index.md
       - Events: events/index.md
   - Case Studies: case-studies/index.md
-  - About: about/index.md
-  - Contributing: contributing/index.md
+  - About:
+      - Overview: about/index.md
+      - Governance: about/governance.md
+      - Release Rules: about/governance-release-rules.md
+      - Roles & Responsibilities: about/governance-roles-responsibilities.md
+      - Partners: about/partners.md
+      - People: about/people.md
+      - Press: about/press.md
+      - Supporters: about/supporters.md
+  - Contributing:
+      - Overview: contributing/index.md
+      - For Users: contributing/users.md
+      - For Coders: contributing/coders.md
+      - For Translators: contributing/translators.md
+      - For Documentation Writers & Designers: contributing/documentation-writers-and-designers.md
