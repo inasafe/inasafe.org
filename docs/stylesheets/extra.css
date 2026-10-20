@@ -11,3 +11,10 @@
   --md-primary-fg-color: #2f3338;
   --md-accent-fg-color: #f15a2b;
 }
+
+/* The logo SVG has a hardcoded dark fill (#2F3338) for light backgrounds -
+   invert it in dark mode so it isn't near-invisible against the dark header. */
+[data-md-color-scheme="slate"] .md-header__button.md-logo img,
+[data-md-color-scheme="slate"] .md-header__button.md-logo svg {
+  filter: invert(1);
+}
