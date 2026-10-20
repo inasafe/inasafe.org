@@ -1,11 +1,12 @@
 {
   description = "NixOS developer environment for the InaSAFE docs + website (MkDocs Material) site.";
 
-  # Tracking nixos-unstable by branch rather than a pinned revision for now —
-  # flake.lock pins the actual resolved commit on first `nix flake lock`/
-  # `check`, so this is still reproducible once the lockfile is committed.
-  # Bump by running `nix flake update` periodically.
-  inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+  # Pinned to the same nixos-unstable revision as the inasafe and GeoE3
+  # flakes (2026-06-15) rather than tracking the nixos-unstable branch HEAD:
+  # a later revision shipped a broken `reuse` package (builder fails to
+  # produce its "man" output), which broke CI. Bump deliberately, not via
+  # `nix flake update`, and verify `nix flake check` passes first.
+  inputs.nixpkgs.url = "github:NixOS/nixpkgs/b4f4a5cf27a0eb848c6212be746a0a718f3bb019";
 
   outputs =
     { self, nixpkgs }:
@@ -42,7 +43,10 @@
           mkdocsEnv
           pkgs.git
           pkgs.pre-commit
-          pkgs.reuse
+          # pkgs.reuse was dropped: not yet load-bearing (no REUSE.toml/
+          # LICENSE exists — see SPECIFICATION.md), and the specific build
+          # that broke CI was this package's "man" output. Re-add once a
+          # license is decided and REUSE.toml is actually wired up.
           pkgs.markdownlint-cli
           pkgs.yamllint
           pkgs.yamlfmt
