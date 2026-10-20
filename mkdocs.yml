@@ -1,0 +1,80 @@
+site_name: InaSAFE
+site_url: https://inasafe.org/
+site_description: >-
+  InaSAFE is free software that produces realistic natural hazard impact
+  scenarios for better planning, preparedness and response activities.
+repo_url: https://github.com/inasafe/inasafe.org
+repo_name: inasafe/inasafe.org
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; InaSAFE contributors
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/branding/logo.svg
+  favicon: assets/branding/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - glightbox
+  - mermaid2
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - User Manual: manual/index.md
+  - Training: training/index.md
+  - News & Events:
+      - News: news/index.md
+      - Events: events/index.md
+  - Case Studies: case-studies/index.md
+  - About: about/index.md
+  - Contributing: contributing/index.md

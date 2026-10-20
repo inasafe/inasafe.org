@@ -1,0 +1,4 @@
+default: true
+MD013: false # line length — prose docs, not code
+MD033: false # allow inline HTML (admonitions, embeds)
+MD041: false # first line doesn't have to be a top-level heading (front matter)
