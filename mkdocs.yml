@@ -1,0 +1,209 @@
+site_name: InaSAFE
+site_url: https://inasafe.org/
+site_description: >-
+  InaSAFE is free software that produces realistic natural hazard impact
+  scenarios for better planning, preparedness and response activities.
+repo_url: https://github.com/inasafe/inasafe.org
+repo_name: inasafe/inasafe.org
+# Deliberately NOT "docs" — that directory is still the legacy WordPress
+# static export and must stay untouched until content migration (and the
+# hosting cutover) is complete. Rename to "docs" only as the final step of
+# retiring the old export.
+docs_dir: docs
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; InaSAFE contributors
+
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/branding/logo.svg
+  favicon: assets/branding/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - glightbox
+  - mermaid2
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - User Manual:
+      - Overview: manual/index.md
+      - Installation: manual/install.md
+      - Getting Help: manual/getting_help.md
+      - Toolbar: manual/toolbar.md
+      - Application Help:
+          - Overview: manual/application-help/index.md
+          - Dock: manual/application-help/dock.md
+          - Keywords: manual/application-help/keywords.md
+          - Keywords Wizard: manual/application-help/keywords_wizard.md
+          - Keywords Editor: manual/application-help/keywords_editor.md
+          - Impact Functions: manual/application-help/impact_functions.md
+          - Minimum Needs: manual/application-help/minimum_needs.md
+          - Needs Manager: manual/application-help/needs_manager.md
+          - Reports: manual/application-help/reports.md
+          - Options: manual/application-help/options.md
+          - Converter: manual/application-help/converter.md
+          - Batch Runner: manual/application-help/batch_runner.md
+          - Impact Layer Merge Tool: manual/application-help/impact_layer_merge_tool.md
+          - OpenStreetMap Downloader: manual/application-help/openstreetmap_downloader.md
+          - Save Scenario: manual/application-help/save_scenario.md
+          - Data Driven Age: manual/application-help/data_driven_age.md
+          - User Extents: manual/application-help/user_extents.md
+      - Functionality: manual/functionality.md
+      - Postprocessors: manual/postprocessors.md
+      - Using QGIS: manual/using_qgis.md
+      - Getting Involved: manual/getting_involved.md
+      - Issue Tracker: manual/issue_tracker.md
+      - Troubleshooting: manual/troubleshooting.md
+      - Writing Documentation: manual/writing_documentation.md
+      - Lookup Table: manual/lookup_table.md
+  - Training:
+      - Overview: training/index.md
+      - Socialisation:
+          - Overview: training/socialisation/index.md
+          - Introduction: training/socialisation/introduction.md
+          - InaSAFE Concepts: training/socialisation/inasafe_concepts.md
+          - Datasets: training/socialisation/datasets.md
+          - Introduction to QGIS: training/socialisation/introduction_to_qgis.md
+          - Run Basic InaSAFE: training/socialisation/run_basic_inasafe.md
+          - Run Intermediate InaSAFE: training/socialisation/run_intermediate_inasafe.md
+          - Run Other Hazards: training/socialisation/run_other_hazards.md
+          - Objective: training/socialisation/objective.md
+          - FAQ: training/socialisation/faq.md
+      - OpenStreetMap:
+          - Overview: training/osm/index.md
+          - Chapter 00 - Preface: training/osm/Chapter-00-preface.md
+          - Chapter 01 - Introduction: training/osm/Chapter-01-introduction.md
+          - Chapter 02 - Getting Started: training/osm/Chapter-02-getting-started.md
+          - Chapter 03 - Introducing the iD Editor: training/osm/Chapter-03-introducing-the-id-editor.md
+          - Chapter 04 - Getting Started with JOSM: training/osm/Chapter-04-getting-started-with-josm.md
+          - Chapter 05 - Editing with JOSM: training/osm/Chapter-05-editing-with-josm.md
+          - Chapter 06 - Using GPS: training/osm/Chapter-06-using-gps.md
+          - Chapter 07 - Field Papers: training/osm/Chapter-07-field-papers.md
+          - Chapter 08 - Conflict Resolution in OSM: training/osm/Chapter-08-conflict-resolution-in-osm.md
+          - Chapter 09 - Inserting Tags: training/osm/Chapter-09-inserting-tag.md
+          - Chapter 10 - Imagery Offset: training/osm/Chapter-10-imagery-offset.md
+          - Chapter 11 - Export OSM Data: training/osm/Chapter-11-export-osm-data.md
+      - QGIS:
+          - Overview: training/qgis/index.md
+          - "Chapter 0: Preface": training/qgis/Chapter-00-Preface.md
+          - "Chapter 1: GIS for Disaster Management": training/qgis/Chapter-01-GIS_for_Disaster_Management.md
+          - "Chapter 2: QGIS and InaSAFE for Disaster Management": training/qgis/Chapter-02-QGIS_and_InaSAFE_for_Disaster_Management.md
+          - "Chapter 3: The Basics of QGIS": training/qgis/Chapter-03-Basic_QGIS.md
+          - "Chapter 4: Map Projection Basics": training/qgis/Chapter-04-Map_Projection_Basic.md
+          - "Chapter 5: Working with Vector Data": training/qgis/Chapter-05-Working_with_Vector_Data.md
+          - "Chapter 6: Working with Raster Data": training/qgis/Chapter-06-Working_with_Raster_Data.md
+          - "Chapter 7: Using Map Composer": training/qgis/Chapter-07-Using_Map_Composer.md
+          - "Chapter 8: Using InaSAFE": training/qgis/Chapter-08-Using_InaSAFE.md
+      - Curriculum:
+          - Overview: training/curriculum/index.md
+          - Curriculum: training/curriculum/curriculum.md
+          - OSM Beginner Toolkit: training/curriculum/osm-beginner-toolkit.md
+          - QGIS/InaSAFE Beginner Toolkit: training/curriculum/qgis-inasafe-beginner-toolkit.md
+          - OSM Intermediate Toolkit: training/curriculum/osm-intermediate-toolkit.md
+          - QGIS/InaSAFE Intermediate Toolkit: training/curriculum/qgis-inasafe-intermediate-toolkit.md
+      - Training of Trainers:
+          - Overview: training/tot/index.md
+          - Adult Learning: training/tot/501_adult_learning.md
+          - Communication Skills: training/tot/502_communication_skills.md
+  - News & Events:
+      - News:
+          - Overview: news/index.md
+          - "InaSAFE 2.1.0 now available": news/another-news-article.md
+          - "InaSAFE 3.1 is released": news/inasafe-3-1-is-released.md
+          - "InaSAFE 3.2.1 Released!": news/inasafe-3-2-1-released.md
+          - "InaSAFE 3.2.2 has been released!": news/inasafe-3-2-2-has-been-released.md
+          - "InaSAFE 3.2.3 is released!": news/inasafe-3-2-3-is-released.md
+          - "InaSAFE 3.2.4 is released!": news/inasafe-3-2-4-is-released.md
+          - "InaSAFE 3.2.5 is released!": news/inasafe-3-2-5-is-released.md
+          - "InaSAFE 3.2.6 is released!": news/inasafe-3-2-6-is-released.md
+          - "InaSAFE 3.2 is pending …": news/inasafe-3-2-is-pending.md
+          - "InaSAFE 3.2 is released!": news/inasafe-3-2-is-released.md
+          - "InaSAFE 3.3 is released!": news/inasafe-3-3-is-released.md
+          - "InaSAFE 3.4 is released": news/inasafe-3-4-is-released.md
+          - "InaSAFE 3.5 is released!": news/inasafe-3-5-is-released.md
+          - "InaSAFE 4.0 is released!": news/inasafe-4-0-is-released.md
+          - "InaSAFE 4.1 is released!": news/inasafe-4-1-is-released.md
+          - "InaSAFE 4.4 is released": news/inasafe-4-4-is-released.md
+          - "InaSAFE 5.0 is released": news/inasafe-5-0-is-released.md
+          - "InaSAFE 2.2.0 released": news/news-2.md
+          - "InaSAFE 3.0 Released": news/version-3-0.md
+      - Events:
+          - Overview: events/index.md
+          - "8th Australasian Natural Hazards Management Conference": events/australasian-hazards-conference.md
+          - "Exhibition Booth and Ignite Stage DRR Week Manado": events/exhibition-booth-and-ignite-stage-drr-week-manado.md
+          - "Joint EOGC-GIT4NDM 2015 Conference": events/joint-eogc-git4ndm-2015-conference.md
+          - "Manado Mapathon": events/manado-mapathon.md
+          - "Understanding Risk 2016": events/understanding-risk-2016.md
+  - Case Studies:
+      - Overview: case-studies/index.md
+      - "InaSAFE for Ambon Tsunami Contingency Plan": case-studies/case-study-inasafe-for-ambon-tsunami-contingency-plan.md
+      - "InaSAFE for Bengawan Solo Flood Contingency Plan": case-studies/case-study-inasafe-for-bengawan-solo-flood-contingency-plan.md
+      - "InaSAFE for 2014 Jakarta Flood": case-studies/case-study-inasafe-for-jakarta-flood-2014.md
+      - "InaSAFE Introduction and Disaster Risk Assessment in Nagekeo": case-studies/disaster-risk-assessment-in-nagekeo.md
+      - "Flood Contingency Plan Development in Makassar City, South Sulawesi": case-studies/flood-contingency-plan-development-in-makassar-city-south-sulawesi.md
+      - "InaSAFE in Disaster Risk Assessment in South Sulawesi": case-studies/inasafe-in-disaster-risk-assessment-in-south-sulawesi.md
+  - About:
+      - Overview: about/index.md
+      - Governance: about/governance.md
+      - Release Rules: about/governance-release-rules.md
+      - Roles & Responsibilities: about/governance-roles-responsibilities.md
+      - Partners: about/partners.md
+      - People: about/people.md
+      - Press: about/press.md
+      - Supporters: about/supporters.md
+  - Contributing:
+      - Overview: contributing/index.md
+      - For Users: contributing/users.md
+      - For Coders: contributing/coders.md
+      - For Translators: contributing/translators.md
+      - For Documentation Writers & Designers: contributing/documentation-writers-and-designers.md

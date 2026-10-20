@@ -1,0 +1,8 @@
+---
+title: "8TH AUSTRALASIAN NATURAL HAZARDS MANAGEMENT CONFERENCE"
+---
+# 8TH AUSTRALASIAN NATURAL HAZARDS MANAGEMENT CONFERENCE
+
+13 – 15th October 2015
+Perth, Australia
+[link here](https://anhmc.org/)

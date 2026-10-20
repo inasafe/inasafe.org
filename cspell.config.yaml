@@ -1,0 +1,20 @@
+version: "0.2"
+language: en
+dictionaries:
+  - en_us
+words:
+  - InaSAFE
+  - Kartoza
+  - mkdocs
+  - BNPB
+  - GFDRR
+  - QGIS
+  - geopackage
+  - PostGIS
+  - gpkg
+  - frontmatter
+ignorePaths:
+  - site/**
+  - "**/*.svg"
+  - "**/*.lock"
+  - legacy-site/**

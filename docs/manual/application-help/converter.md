@@ -1,0 +1,55 @@
+
+# Shakemap Converter
+
+
+Shakemaps are useful for carrying out contingency planning for an earthquake
+event. Normally these are distributed as grid.xml files which are not
+usable in InaSAFE or QGIS. The Shakemap Converter tool imports a grid.xml 
+file as a GEOTIFF file so that it can be used within InaSAFE.
+
+Two different interpolation algorithms can be used during the import process -
+**Nearest Neighbour** and **Inverse Distance**. After the conversion, the tool
+automatically creates InaSAFE keyword metadata for the layer so that
+it can be used immediately for analysis.
+
+![](../../assets/user-docs/converter.png)
+
+
+   *Converter*
+
+To use this tool effectively:
+
+- Select a `grid.xml` file for the input layer.
+- Add the title of the shakemap that will be used for the keywords.
+- Add the source of the shakemap that will also be used for the keywords.
+- Choose where to write the output layer to.
+- Choose the interpolation algorithm that should be used when converting the
+  xml grid to a raster. If unsure keep the default.
+
+You can obtain shake data for free from the `USGS
+shakemap site <http://earthquake.usgs.gov/earthquakes/shakemap/list.php?y=2013>`_.
+
+When you download the grid file, you should right-click on it and choose
+**Save as** in order to ensure that it is saved properly. OSX and
+Linux users may also consider using command line tools to fetch the grid file:
+
+OSX:
+
+```
+curl -O http://earthquake.usgs.gov/earthquakes/shakemap/global/shake/<shake id>/download/grid.xml
+
+```
+
+Linux:
+
+```
+wget -C http://earthquake.usgs.gov/earthquakes/shakemap/global/shake/<shake id>/download/grid.xml
+
+```
+
+!!! note
+    Replace the <shake id> in the commands above with the actual shake id.
+    
+    
+    
+

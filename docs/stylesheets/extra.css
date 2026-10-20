@@ -1,0 +1,13 @@
+/* InaSAFE brand colours, extracted from inasafe-graphics/logo/*.svg and
+   inasafe-graphics/logo-url/Logo-url-monochrome-orange.svg. */
+:root {
+  --md-primary-fg-color: #2f3338;
+  --md-primary-fg-color--light: #4a4f56;
+  --md-primary-fg-color--dark: #202327;
+  --md-accent-fg-color: #f15a2b;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #2f3338;
+  --md-accent-fg-color: #f15a2b;
+}
