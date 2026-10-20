@@ -1,7 +1,6 @@
 ---
 title: "Exhibition Booth and Ignite Stage DRR Week Manado"
 ---
-<!-- TODO: manual-review — original page had embeds/shortcodes/galleries that may not have converted cleanly -->
 
 # Exhibition Booth and Ignite Stage DRR Week Manado
 

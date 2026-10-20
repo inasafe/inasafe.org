@@ -1,46 +1,67 @@
 ---
 title: "Press"
 ---
-<!-- TODO: manual-review — page-builder template, verify formatting/completeness against the original -->
 
 # Press
 
-- ![](assets/psnews-300x102.png)                         	
-## Software puts disaster relief in the picture
+![](assets/psnews-300x102.png){ width="150" }
 
-                            psnews.com.au
+### Software puts disaster relief in the picture
 
-                                               - ![](assets/bloomberg_view-300x102.png)                         	
-## Seven Steps to Surviving a Disaster
+psnews.com.au
 
-                            bloombergview.com  , February 19, 2014
+---
 
-                                               - ![](assets/rappler-300x135.png)                         	
-## Indonesia, Philippines collaborate on disaster risk reduction tool
+![](assets/bloomberg_view-300x102.png){ width="150" }
 
-                            rappler.com  , July 6, 2014
+### Seven Steps to Surviving a Disaster
 
-                                               - ![](assets/WB-LOGO-EN.png)                         	
-## Indonesia: New disaster management software released worldwide
+bloombergview.com, February 19, 2014
 
-                            worldbank.org  , April 7, 2014
+---
 
-                                               - ![](assets/GIStime_Logo_color.png)                         	
-## Disaster management with InaSAFE 2.0
+![](assets/rappler-300x135.png){ width="150" }
 
-                            gistimes.com  , May 2, 2014
+### Indonesia, Philippines collaborate on disaster risk reduction tool
 
-                                               - ![](assets/australian-aid-identifier-colour-small.jpg)                         	
-## New disaster management software released worldwide
+rappler.com, July 6, 2014
 
-                            aifdr.org  , April 7, 2014
+---
 
-                                               - ![](assets/australian-aid-identifier-colour-small.jpg)                         	
-## Indonesia Scenario Assessment for Emergencies – InaSAFE
+![](assets/WB-LOGO-EN.png){ width="150" }
 
-                            aifdr.org  , July 23, 2012
+### Indonesia: New disaster management software released worldwide
 
-                                               - ![](assets/australian-aid-identifier-colour-small.jpg)                         	
-## Key Disaster Management Successes: January 2012 – February 2013
+worldbank.org, April 7, 2014
 
-                            aifdr.org  , April 17, 2013
+---
+
+![](assets/GIStime_Logo_color.png){ width="150" }
+
+### Disaster management with InaSAFE 2.0
+
+gistimes.com, May 2, 2014
+
+---
+
+![](assets/australian-aid-identifier-colour-small.jpg){ width="150" }
+
+### New disaster management software released worldwide
+
+aifdr.org, April 7, 2014
+
+---
+
+![](assets/australian-aid-identifier-colour-small.jpg){ width="150" }
+
+### Indonesia Scenario Assessment for Emergencies – InaSAFE
+
+aifdr.org, July 23, 2012
+
+---
+
+![](assets/australian-aid-identifier-colour-small.jpg){ width="150" }
+
+### Key Disaster Management Successes: January 2012 – February 2013
+
+aifdr.org, April 17, 2013

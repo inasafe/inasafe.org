@@ -1,7 +1,6 @@
 ---
 title: "Manado Mapathon"
 ---
-<!-- TODO: manual-review — original page had embeds/shortcodes/galleries that may not have converted cleanly -->
 
 # Manado Mapathon
 
