@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{#
+  The original inasafe.org colour-codes a secondary nav strip per section:
+  blue for "For Users", green for "For Contributors" (coders/translators/
+  documentation-writers), orange everywhere else (already the default
+  accent set in docs/stylesheets/extra.css). This restores that per-section
+  signal as a build-time accent-colour override, since mkdocs-material's
+  palette is otherwise site-wide.
+#}
+{% block extrahead %}
+  {{ super() }}
+  {% if page and page.url %}
+    {% if 'contributing/users' in page.url %}
+      <style>:root, [data-md-color-scheme="slate"] { --md-accent-fg-color: #3db2dd; }</style>
+    {% elif 'contributing/' in page.url %}
+      <style>:root, [data-md-color-scheme="slate"] { --md-accent-fg-color: #50cf5c; }</style>
+    {% endif %}
+  {% endif %}
+{% endblock %}
