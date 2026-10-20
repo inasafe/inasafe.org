@@ -19,6 +19,8 @@ theme:
   custom_dir: overrides
   logo: assets/branding/logo.svg
   favicon: assets/branding/favicon.png
+  font:
+    text: Ubuntu
   palette:
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -39,6 +41,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - navigation.top
+    - navigation.path
     - search.suggest
     - search.highlight
     - content.code.copy
@@ -53,18 +56,13 @@ plugins:
   - tags
   - git-revision-date-localized
   - glightbox
-  - mermaid2
 
 markdown_extensions:
   - attr_list
   - md_in_html
   - admonition
   - pymdownx.details
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.highlight
@@ -84,22 +82,25 @@ nav:
       - Toolbar: manual/toolbar.md
       - Application Help:
           - Overview: manual/application-help/index.md
-          - Dock: manual/application-help/dock.md
-          - Keywords: manual/application-help/keywords.md
-          - Keywords Wizard: manual/application-help/keywords_wizard.md
-          - Keywords Editor: manual/application-help/keywords_editor.md
-          - Impact Functions: manual/application-help/impact_functions.md
-          - Minimum Needs: manual/application-help/minimum_needs.md
-          - Needs Manager: manual/application-help/needs_manager.md
-          - Reports: manual/application-help/reports.md
-          - Options: manual/application-help/options.md
-          - Converter: manual/application-help/converter.md
-          - Batch Runner: manual/application-help/batch_runner.md
-          - Impact Layer Merge Tool: manual/application-help/impact_layer_merge_tool.md
-          - OpenStreetMap Downloader: manual/application-help/openstreetmap_downloader.md
-          - Save Scenario: manual/application-help/save_scenario.md
-          - Data Driven Age: manual/application-help/data_driven_age.md
-          - User Extents: manual/application-help/user_extents.md
+          - Core workflow:
+              - Dock: manual/application-help/dock.md
+              - Keywords: manual/application-help/keywords.md
+              - Keywords Wizard: manual/application-help/keywords_wizard.md
+              - Keywords Editor: manual/application-help/keywords_editor.md
+              - Impact Functions: manual/application-help/impact_functions.md
+          - Post-processing & output:
+              - Minimum Needs: manual/application-help/minimum_needs.md
+              - Needs Manager: manual/application-help/needs_manager.md
+              - Reports: manual/application-help/reports.md
+          - Data & batch tools:
+              - Options: manual/application-help/options.md
+              - Converter: manual/application-help/converter.md
+              - Batch Runner: manual/application-help/batch_runner.md
+              - Impact Layer Merge Tool: manual/application-help/impact_layer_merge_tool.md
+              - OpenStreetMap Downloader: manual/application-help/openstreetmap_downloader.md
+              - Save Scenario: manual/application-help/save_scenario.md
+              - Data Driven Age: manual/application-help/data_driven_age.md
+              - User Extents: manual/application-help/user_extents.md
       - Functionality: manual/functionality.md
       - Postprocessors: manual/postprocessors.md
       - Using QGIS: manual/using_qgis.md
@@ -157,35 +158,34 @@ nav:
           - Overview: training/tot/index.md
           - Adult Learning: training/tot/501_adult_learning.md
           - Communication Skills: training/tot/502_communication_skills.md
-  - News & Events:
-      - News:
-          - Overview: news/index.md
-          - "InaSAFE 2.1.0 now available": news/another-news-article.md
-          - "InaSAFE 3.1 is released": news/inasafe-3-1-is-released.md
-          - "InaSAFE 3.2.1 Released!": news/inasafe-3-2-1-released.md
-          - "InaSAFE 3.2.2 has been released!": news/inasafe-3-2-2-has-been-released.md
-          - "InaSAFE 3.2.3 is released!": news/inasafe-3-2-3-is-released.md
-          - "InaSAFE 3.2.4 is released!": news/inasafe-3-2-4-is-released.md
-          - "InaSAFE 3.2.5 is released!": news/inasafe-3-2-5-is-released.md
-          - "InaSAFE 3.2.6 is released!": news/inasafe-3-2-6-is-released.md
-          - "InaSAFE 3.2 is pending …": news/inasafe-3-2-is-pending.md
-          - "InaSAFE 3.2 is released!": news/inasafe-3-2-is-released.md
-          - "InaSAFE 3.3 is released!": news/inasafe-3-3-is-released.md
-          - "InaSAFE 3.4 is released": news/inasafe-3-4-is-released.md
-          - "InaSAFE 3.5 is released!": news/inasafe-3-5-is-released.md
-          - "InaSAFE 4.0 is released!": news/inasafe-4-0-is-released.md
-          - "InaSAFE 4.1 is released!": news/inasafe-4-1-is-released.md
-          - "InaSAFE 4.4 is released": news/inasafe-4-4-is-released.md
-          - "InaSAFE 5.0 is released": news/inasafe-5-0-is-released.md
-          - "InaSAFE 2.2.0 released": news/news-2.md
-          - "InaSAFE 3.0 Released": news/version-3-0.md
-      - Events:
-          - Overview: events/index.md
-          - "8th Australasian Natural Hazards Management Conference": events/australasian-hazards-conference.md
-          - "Exhibition Booth and Ignite Stage DRR Week Manado": events/exhibition-booth-and-ignite-stage-drr-week-manado.md
-          - "Joint EOGC-GIT4NDM 2015 Conference": events/joint-eogc-git4ndm-2015-conference.md
-          - "Manado Mapathon": events/manado-mapathon.md
-          - "Understanding Risk 2016": events/understanding-risk-2016.md
+  - News:
+      - Overview: news/index.md
+      - "InaSAFE 2.1.0 now available": news/another-news-article.md
+      - "InaSAFE 3.1 is released": news/inasafe-3-1-is-released.md
+      - "InaSAFE 3.2.1 Released!": news/inasafe-3-2-1-released.md
+      - "InaSAFE 3.2.2 has been released!": news/inasafe-3-2-2-has-been-released.md
+      - "InaSAFE 3.2.3 is released!": news/inasafe-3-2-3-is-released.md
+      - "InaSAFE 3.2.4 is released!": news/inasafe-3-2-4-is-released.md
+      - "InaSAFE 3.2.5 is released!": news/inasafe-3-2-5-is-released.md
+      - "InaSAFE 3.2.6 is released!": news/inasafe-3-2-6-is-released.md
+      - "InaSAFE 3.2 is pending …": news/inasafe-3-2-is-pending.md
+      - "InaSAFE 3.2 is released!": news/inasafe-3-2-is-released.md
+      - "InaSAFE 3.3 is released!": news/inasafe-3-3-is-released.md
+      - "InaSAFE 3.4 is released": news/inasafe-3-4-is-released.md
+      - "InaSAFE 3.5 is released!": news/inasafe-3-5-is-released.md
+      - "InaSAFE 4.0 is released!": news/inasafe-4-0-is-released.md
+      - "InaSAFE 4.1 is released!": news/inasafe-4-1-is-released.md
+      - "InaSAFE 4.4 is released": news/inasafe-4-4-is-released.md
+      - "InaSAFE 5.0 is released": news/inasafe-5-0-is-released.md
+      - "InaSAFE 2.2.0 released": news/news-2.md
+      - "InaSAFE 3.0 Released": news/version-3-0.md
+  - Events:
+      - Overview: events/index.md
+      - "8th Australasian Natural Hazards Management Conference": events/australasian-hazards-conference.md
+      - "Exhibition Booth and Ignite Stage DRR Week Manado": events/exhibition-booth-and-ignite-stage-drr-week-manado.md
+      - "Joint EOGC-GIT4NDM 2015 Conference": events/joint-eogc-git4ndm-2015-conference.md
+      - "Manado Mapathon": events/manado-mapathon.md
+      - "Understanding Risk 2016": events/understanding-risk-2016.md
   - Case Studies:
       - Overview: case-studies/index.md
       - "InaSAFE for Ambon Tsunami Contingency Plan": case-studies/case-study-inasafe-for-ambon-tsunami-contingency-plan.md

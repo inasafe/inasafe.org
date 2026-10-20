@@ -21,9 +21,4 @@ and modify it.
 
 [:material-account: I'm a User](manual/index.md){ .md-button .md-button--primary }
 [:material-hand-heart: I'm a Contributor](contributing/index.md){ .md-button }
-[:material-book-open-variant: Manual](manual/index.md){ .md-button }
-[:material-school: Training](training/index.md){ .md-button }
-[:material-newspaper-variant-outline: News & Events](news/index.md){ .md-button }
-[:material-map-marker-radius-outline: Case Studies](case-studies/index.md){ .md-button }
-[:material-information-outline: About](about/index.md){ .md-button }
 [:simple-github: GitHub](https://github.com/inasafe/inasafe){ .md-button }
